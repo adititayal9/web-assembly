@@ -145,8 +145,8 @@ int main(int argc, char ** argv)
 extern "C" {
 #endif
 
-void EMSCRIPTEN_KEEPALIVE myFunction(int argc) {
-    printf("%d", argc);
+void EMSCRIPTEN_KEEPALIVE myFunction(char *str) {
+    printf("%s", str);
     printf("MyFunction Called\n");
     struct Trie* head = getNewTrieNode();
 
