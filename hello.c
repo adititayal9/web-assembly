@@ -139,7 +139,7 @@ int deletion(struct Trie **curr, char *str)
 // Trie Implementation in C - Insertion, Searching and Deletion
 int main(int argc, char **argv)
 {
-    printf("Hello World\n");
+    printf("Hello Worldddd\n");
 }
 
 #ifdef __cplusplus
@@ -147,9 +147,15 @@ extern "C"
 {
 #endif
 
-    void EMSCRIPTEN_KEEPALIVE myFunction(char *str)
+    void EMSCRIPTEN_KEEPALIVE myFunction(int * a, int s)
     {
-        printf("%s", str);
+        printf("MyFunction Called\n");
+        printf("%d\n", a[0]);
+//        for (int i = 0; i < s; i++) {
+//            printf("%d ", *(a + i));
+//        }
+        printf("\n%d\n", s);
+
         printf("MyFunction Called\n");
         struct Trie *head = getNewTrieNode();
 
@@ -189,6 +195,27 @@ extern "C"
 
         printf("%d ", search(head, "hell")); // print 0
     }
+      void EMSCRIPTEN_KEEPALIVE addition(int* a, int* b, int asize, int bsize)
+      {
+        printf("adititayal");
+        printf("%d %d %d %d", *a, *b, asize, bsize);
+
+        int bufSize = asize + bsize;
+        int result[bufSize];
+        for(int i=0; i<bufSize; i++) {
+            if(i < asize) {
+                result[i] = a[i];
+            }
+            else {
+                result[i] = b[i - bsize - 1];
+            }
+        }
+        for (int i = 0; i< bufSize; i++) {
+            printf("%d", result[i]);
+        }
+//        int *arrayPtr = &result[0];
+//        return arrayPtr;
+      }
 
 #ifdef __cplusplus
 }
