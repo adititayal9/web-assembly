@@ -139,7 +139,7 @@ int deletion(struct Trie **curr, char *str)
 // Trie Implementation in C - Insertion, Searching and Deletion
 int main(int argc, char **argv)
 {
-    printf("Hello Worldddd\n");
+    printf("Hello Worldsssddd\n");
 }
 
 #ifdef __cplusplus
@@ -147,75 +147,74 @@ extern "C"
 {
 #endif
 
-    void EMSCRIPTEN_KEEPALIVE myFunction(int * a, int s)
+    void EMSCRIPTEN_KEEPALIVE myFunction(int *a, int s)
     {
         printf("MyFunction Called\n");
-        printf("%d\n", a[0]);
-//        for (int i = 0; i < s; i++) {
-//            printf("%d ", *(a + i));
-//        }
+        for (int i = 0; i < s; i++) {
+            printf("%d ", a[i]);
+        }
         printf("\n%d\n", s);
 
-        printf("MyFunction Called\n");
-        struct Trie *head = getNewTrieNode();
-
-        insert(head, "hello");
-        printf("%d ", search(head, "hello")); // print 1
-
-        insert(head, "helloworld");
-        printf("%d ", search(head, "helloworld")); // print 1
-
-        printf("%d ", search(head, "helll")); // print 0 (Not present)
-
-        insert(head, "hell");
-        printf("%d ", search(head, "hell")); // print 1
-
-        insert(head, "h");
-        printf("%d \n", search(head, "h")); // print 1 + newline
-
-        deletion(&head, "hello");
-        printf("%d ", search(head, "hello"));      // print 0 (hello deleted)
-        printf("%d ", search(head, "helloworld")); // print 1
-        printf("%d \n", search(head, "hell"));     // print 1 + newline
-
-        deletion(&head, "h");
-        printf("%d ", search(head, "h"));           // print 0 (h deleted)
-        printf("%d ", search(head, "hell"));        // print 1
-        printf("%d\n", search(head, "helloworld")); // print 1 + newline
-
-        deletion(&head, "helloworld");
-        printf("%d ", search(head, "helloworld")); // print 0
-        printf("%d ", search(head, "hell"));       // print 1
-
-        deletion(&head, "hell");
-        printf("%d\n", search(head, "hell")); // print 0 + newline
-
-        if (head == NULL)
-            printf("Trie empty!!\n"); // Trie is empty now
-
-        printf("%d ", search(head, "hell")); // print 0
+//        printf("MyFunction Called\n");
+//        struct Trie *head = getNewTrieNode();
+//
+//        insert(head, "hello");
+//        printf("%d ", search(head, "hello")); // print 1
+//
+//        insert(head, "helloworld");
+//        printf("%d ", search(head, "helloworld")); // print 1
+//
+//        printf("%d ", search(head, "helll")); // print 0 (Not present)
+//
+//        insert(head, "hell");
+//        printf("%d ", search(head, "hell")); // print 1
+//
+//        insert(head, "h");
+//        printf("%d \n", search(head, "h")); // print 1 + newline
+//
+//        deletion(&head, "hello");
+//        printf("%d ", search(head, "hello"));      // print 0 (hello deleted)
+//        printf("%d ", search(head, "helloworld")); // print 1
+//        printf("%d \n", search(head, "hell"));     // print 1 + newline
+//
+//        deletion(&head, "h");
+//        printf("%d ", search(head, "h"));           // print 0 (h deleted)
+//        printf("%d ", search(head, "hell"));        // print 1
+//        printf("%d\n", search(head, "helloworld")); // print 1 + newline
+//
+//        deletion(&head, "helloworld");
+//        printf("%d ", search(head, "helloworld")); // print 0
+//        printf("%d ", search(head, "hell"));       // print 1
+//
+//        deletion(&head, "hell");
+//        printf("%d\n", search(head, "hell")); // print 0 + newline
+//
+//        if (head == NULL)
+//            printf("Trie empty!!\n"); // Trie is empty now
+//
+//        printf("%d ", search(head, "hell")); // print 0
     }
-      void EMSCRIPTEN_KEEPALIVE addition(int* a, int* b, int asize, int bsize)
-      {
-        printf("adititayal");
-        printf("%d %d %d %d", *a, *b, asize, bsize);
-
-        int bufSize = asize + bsize;
-        int result[bufSize];
-        for(int i=0; i<bufSize; i++) {
-            if(i < asize) {
-                result[i] = a[i];
-            }
-            else {
-                result[i] = b[i - bsize - 1];
-            }
-        }
-        for (int i = 0; i< bufSize; i++) {
-            printf("%d", result[i]);
-        }
-//        int *arrayPtr = &result[0];
-//        return arrayPtr;
-      }
+//      void EMSCRIPTEN_KEEPALIVE addition(int* a, int* b, int asize, int bsize)
+//      {
+//        printf("adititayal");
+//        printf("%d %d %d %d", *a, *b, asize, bsize);
+//
+//        int bufSize = asize + bsize;
+//        int result[bufSize];
+//        for(int i=0; i<bufSize; i++) {
+//            if(i < asize) {
+//                result[i] = a[i];
+//            }
+//            else {
+//                result[i] = b[i - bsize - 1];
+//            }
+//        }
+//        for (int i = 0; i< bufSize; i++) {
+//            printf("%d", result[i]);
+//        }
+////        int *arrayPtr = &result[0];
+////        return arrayPtr;
+//      }
 
 #ifdef __cplusplus
 }

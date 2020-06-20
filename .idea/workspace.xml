@@ -36,7 +36,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592560960166</updated>
-      <workItem from="1592560961940" duration="19328000" />
+      <workItem from="1592560961940" duration="33878000" />
     </task>
     <servers />
   </component>
@@ -44,13 +44,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="589" y="318" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592642988775">
+      <screen x="0" y="23" width="1680" height="970" />
+    </state>
+    <state x="589" y="318" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.970@0.23.1680.970" timestamp="1592642988775" />
     <state x="498" y="265" width="684" height="486" key="find.popup" timestamp="1592580342700">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
     <state x="498" y="265" width="684" height="486" key="find.popup/0.23.1680.970@0.23.1680.970" timestamp="1592580342700" />
-    <state x="505" y="236" width="670" height="676" key="search.everywhere.popup" timestamp="1592568165120">
+    <state x="505" y="236" width="670" height="676" key="search.everywhere.popup" timestamp="1592641799092">
       <screen x="0" y="23" width="1680" height="970" />
     </state>
-    <state x="505" y="236" width="670" height="676" key="search.everywhere.popup/0.23.1680.970@0.23.1680.970" timestamp="1592568165120" />
+    <state x="505" y="236" width="670" height="676" key="search.everywhere.popup/0.23.1680.970@0.23.1680.970" timestamp="1592641799092" />
   </component>
 </project>

@@ -72,36 +72,37 @@ int main(int argc, const char * argv[]) {
     cout << "Hello Worlddd" << endl;
 }
 
-#ifdef __cplusplus
 extern "C"
 {
-#endif
+    // Driver
+    void EMSCRIPTEN_KEEPALIVE myfunction (int *a, int n) {
+//        uint8_t *ptr = (uint8_t*)a;
 
-// Driver
-void myfunction (string str)
-{
-    cout << "MyFunction Called\n";
-    cout << str << endl;
-    // Input keys (use only 'a' through 'z'
-    // and lower case)
-    string keys[] = {"the", "a", "there",
-                    "answer", "any", "by",
-                     "bye", "their" };
-    int n = sizeof(keys)/sizeof(keys[0]);
+        cout << "myfunction Called\n";
+        for (int i = 0; i< n; i++) {
+         printf("%c", a[i]);
+        }
+        cout << endl;
+         cout << n << endl;
+        cout << "MyFunction Called\n";
 
-    struct TrieNode *root = getNode();
-
-    // Construct trie
-    for (int i = 0; i < n; i++)
-        insert(root, keys[i]);
-
-    // Search for different keys
-    search(root, "the")? cout << "Yes\n" :
-                         cout << "No\n";
-    search(root, "these")? cout << "Yes\n" :
-                           cout << "No\n";
+        // Input keys (use only 'a' through 'z'
+        // and lower case)
+    //    string keys[] = {"the", "a", "there",
+    //                    "answer", "any", "by",
+    //                     "bye", "their" };
+    //    int n = sizeof(keys)/sizeof(keys[0]);
+    //
+    //    struct TrieNode *root = getNode();
+    //
+    //    // Construct trie
+    //    for (int i = 0; i < n; i++)
+    //        insert(root, keys[i]);
+    //
+    //    // Search for different keys
+    //    search(root, "the")? cout << "Yes\n" :
+    //                         cout << "No\n";
+    //    search(root, "these")? cout << "Yes\n" :
+    //                           cout << "No\n";
+    }
 }
-
-#ifdef __cplusplus
-}
-#endif
